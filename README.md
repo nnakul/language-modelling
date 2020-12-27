@@ -29,7 +29,7 @@ In this project as a convention for the interpolated models, an interpolated n-g
     <!--&nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.2 0.8 0 0 0 ] [ 0.0714 0.2857 0.6428 0 0 ] [ 0.0333 0.1333 0.5333 0.3 0 ] [ 0.0182 0.0727 0.4545 0.2909 0.1636 ]-->
 </ul>
 
-*Open in raw format to know the values of the weights in each case*
+**Open in raw format to know the values of the weights in each case.**
   
   ### OPTIMISATION OF WEIGHTS IN N-GRAM + UNIFORM INTERPOLATIONS (OPTIMISE_INTERPOLATION.py)
   
