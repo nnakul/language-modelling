@@ -24,7 +24,8 @@ In this project as a convention for the interpolated models, an interpolated n-g
     <!--&nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.425 0.575 0 0 0 ] [ 0.1833 0.3333 0.4833 0 0 ] [ 0.025 0.175 0.475 0.325 0 ] [ 0.01 0.105 0.39 0.295 0.2 ]-->
   <li> INTERPOLATION STRATEGY O6 : In this case, the weights are proportional to the square of the rank alloted to the models based on their perplexities (like in strategy 4 and 5).<br>
     <!--&nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.2 0.8 0 0 0 ] [ 0.0714 0.2857 0.6428 0 0 ] [ 0.0333 0.1333 0.5333 0.3 0 ] [ 0.0182 0.0727 0.4545 0.2909 0.1636 ]-->
-  </ul>
- *Open in raw format to know the values of the weights in each case*
+</ul>
+
+*Open in raw format to know the values of the weights in each case*
   
   
