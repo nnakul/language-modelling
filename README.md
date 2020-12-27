@@ -10,17 +10,17 @@ As the length of the n-gram increases, the power or expressiveness of the model 
 For most n-gram models, their performance is slightly improved when we interpolate their predicted probabilities with the uniform model along with other n-gram models with lesser length. In this part, each of the five models (including the uniform model) is given some interpolation weight between zero and unity such that all the weights add-up to one. The interpolated model is then evaluated by computing its perplexity for the test corpus. Several interpolation strategies were used and tested using this application and the following observations were made. In this project as a convention for the interpolated models, an interpolated n-gram model is a model having non-zero weight for the n-gram model and zero weight for all m-gram models with m>n.
 <ul>
   <li> INTERPOLATION STRATEGY O1 : In this case, pure n-gram models were used without any mixing with other models. As discussed, the variation in perplexity was not observed to be monotonically decreasing as one might expect it to.<br>
-    [ 1 0 0 0 0 ] [ 0 1 0 0 0 ] [ 0 0 1 0 0 ] [ 0 0 0 1 0 ] [ 0 0 0 0 1 ]
+    &nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0 1 0 0 0 ] [ 0 0 1 0 0 ] [ 0 0 0 1 0 ] [ 0 0 0 0 1 ]
   <li> INTERPOLATION STRATEGY O2 : In this case, the total weight of one was equally distributed among all the n-grams.<br>
-    [ 1 0 0 0 0 ] [ 0.5 0.5 0 0 0 ] [ 0.33 0.33 0.33 0 0 ] [ 0.25 0.25 0.25 0.25 0 ] [ 0.2 0.2 0.2 0.2 0.2 ]
-  <li> INTERPOLATION STRATEGY O3 : In this case, some weight is given to the uniform model (less than others) and the rest of the weight is equally distributed among the others.
-    [ 1 0 0 0 0 ] [ 0.4 0.6 0 0 0 ] [ 0.2 0.4 0.4 0 0 ] [ 0.025 0.325 0.325 0.325 0 ] [ 0.04 0.24 0.24 0.24 0.24 ]
-  <li> INTERPOLATION STRATEGY O4 : In this case, the models in the first strategy are ranked based on decreasing perplexity and then weights are distributed as an increasing A.P.
-    [ 1 0 0 0 0 ] [ 0.45 0.55 0 0 0 ] [ 0.233 0.333 0.433 0 0 ] [ 0.1 0.2 0.4 0.3 0 ] [ 0.02 0.11 0.38 0.29 0.2 ]
-  <li> INTERPOLATION STRATEGY O5 : In this case, the common difference of the A.P. in which the weights were distributed in the fourth strategy was increased.
-    [ 1 0 0 0 0 ] [ 0.425 0.575 0 0 0 ] [ 0.1833 0.3333 0.4833 0 0 ] [ 0.025 0.175 0.475 0.325 0 ] [ 0.01 0.105 0.39 0.295 0.2 ]
-  <li> INTERPOLATION STRATEGY O6 : In this case, the weights are proportional to the rank alloted to the models based on their perplexities (like in strategy 4 and 5).
-    [ 1 0 0 0 0 ] [ 0.2 0.8 0 0 0 ] [ 0.0714 0.2857 0.6428 0 0 ] [ 0.0333 0.1333 0.5333 0.3 0 ] [ 0.0182 0.0727 0.4545 0.2909 0.1636 ]
+    &nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.5 0.5 0 0 0 ] [ 0.33 0.33 0.33 0 0 ] [ 0.25 0.25 0.25 0.25 0 ] [ 0.2 0.2 0.2 0.2 0.2 ]
+  <li> INTERPOLATION STRATEGY O3 : In this case, some weight is given to the uniform model (less than others) and the rest of the weight is equally distributed among the others.<br>
+    &nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.4 0.6 0 0 0 ] [ 0.2 0.4 0.4 0 0 ] [ 0.025 0.325 0.325 0.325 0 ] [ 0.04 0.24 0.24 0.24 0.24 ]
+  <li> INTERPOLATION STRATEGY O4 : In this case, the models in the first strategy are ranked based on decreasing perplexity and then weights are distributed as an increasing A.P.<br>
+    &nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.45 0.55 0 0 0 ] [ 0.233 0.333 0.433 0 0 ] [ 0.1 0.2 0.4 0.3 0 ] [ 0.02 0.11 0.38 0.29 0.2 ]
+  <li> INTERPOLATION STRATEGY O5 : In this case, the common difference of the A.P. in which the weights were distributed in the fourth strategy was increased.<br>
+    &nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.425 0.575 0 0 0 ] [ 0.1833 0.3333 0.4833 0 0 ] [ 0.025 0.175 0.475 0.325 0 ] [ 0.01 0.105 0.39 0.295 0.2 ]
+  <li> INTERPOLATION STRATEGY O6 : In this case, the weights are proportional to the rank alloted to the models based on their perplexities (like in strategy 4 and 5).<br>
+    &nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0.2 0.8 0 0 0 ] [ 0.0714 0.2857 0.6428 0 0 ] [ 0.0333 0.1333 0.5333 0.3 0 ] [ 0.0182 0.0727 0.4545 0.2909 0.1636 ]
   
   
   
