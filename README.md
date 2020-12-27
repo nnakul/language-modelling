@@ -10,8 +10,10 @@ As the length of the n-gram increases, the power or expressiveness of the model 
 For most n-gram models, their performance is slightly improved when we interpolate their predicted probabilities with the uniform model along with other n-gram models with lesser length. In this part, each of the five models (including the uniform model) is given some interpolation weight between zero and unity such that all the weights add-up to one. The interpolated model is then evaluated by computing its perplexity for the test corpus. Several interpolation strategies were used and tested using this application and the following observations were made.<br>
 
 <img src="plot.png" >
+
 *The pure uniform model is not shown in the plot due to its high perplexity of 3939.<br>
 In this project as a convention for the interpolated models, an interpolated n-gram model is a model having non-zero weight for the n-gram model and zero weight for all m-gram models with m>n.*
+
 <ul>
   <li> INTERPOLATION STRATEGY O1 : In this case, pure n-gram models were used without any mixing with other models. As discussed, the variation in perplexity was not observed to be monotonically decreasing as one might expect it to.<br>
     <!--&nbsp;&nbsp;[ 1 0 0 0 0 ] [ 0 1 0 0 0 ] [ 0 0 1 0 0 ] [ 0 0 0 1 0 ] [ 0 0 0 0 1 ]-->
