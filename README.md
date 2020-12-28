@@ -33,5 +33,6 @@ In this project as a convention for the interpolated models, an interpolated n-g
   
   ### OPTIMISED INTERPOLATION OF MODELS
   ### o MIXING N-GRAM MODELS WITH UNIFORM MODEL ONLY
-  The perplexities of n-gram language models were studied upon mixing them with some proportion of uniform model (the naivest model in which each unigram has the same probability of occurence). It was observed that for all n-gram models (at least upto length 4), the performance is considerably improved their predicted probabilities are interpolated with the uniform model. Look at the performance of these models when mixed with the uniform model in different fractions.
-<img src="plot_02.png" >
+  The perplexities of n-gram language models were studied upon mixing them with some proportion of uniform model (the naivest model in which each unigram has the same probability of occurence). It was observed that for all n-gram models (at least upto length 4), the performance is considerably improved when their predicted probabilities are interpolated with certain percentage of uniform model. Look at the performance of these models when mixed with the uniform model in different fractions.<br>
+<img src="plot_02.png" ><br>
+As the contribution of the n-gram model is reduced from 100% to 75%, a drastic decrease in perplexity is observed. On further reducing it to 50%, the perplexity increases but is still less than that of a pure n-gram model. Finally, a 25% of n-gram model mixed with 75% of uniform model shows a very bad performance because of higher contribution by a naive uniform model.
