@@ -32,11 +32,16 @@ In this project as a convention for the interpolated models, an interpolated n-g
 **Open in raw format to know the values of the weights in each case.**
   
   ### OPTIMISED INTERPOLATION OF MODELS
-  ### &nbsp;&nbsp;MIXING N-GRAM MODELS WITH UNIFORM MODEL ONLY
+  ### &nbsp;&nbsp;MIXING N-GRAM MODELS WITH UNIFORM MODEL ONLY (OPTIMISE_INTERPOLATION.py)
   The perplexities of n-gram language models were studied upon mixing them with some proportion of uniform model (the naivest model in which each unigram has the same probability of occurence). It was observed that for all n-gram models (at least upto length 4), the performance is considerably improved when their predicted probabilities are interpolated with certain percentage of uniform model. Look at the performance of these models when mixed with the uniform model in different fractions.<br>
 
 <img src="plot_02.png" ><br>
 
 As the contribution of the n-gram model is reduced from 100% to 75%, a drastic decrease in perplexity is observed. On further reducing it to 50%, the perplexity increases but is still less than that of a pure n-gram model. Finally, a 25% of n-gram model mixed with 75% of uniform model shows a very bad performance because of higher contribution by a naive uniform model.
 
-This suggests that for each of the interpolated models constructed by mixing uniform and a pure n-gram model, there is an optimal division of weights between the two such that the model's perplexity is the lowest.
+This suggests that for each of the interpolated models constructed by mixing uniform and a pure n-gram model, there is an optimal division of weights between the two such that the model's perplexity is the lowest. *OPTIMISE_INTERPOLATION.py* uses a first-order iterative optimization algorithm called *gradient ascent-descent algorithm* to determine this optimal configuration for any n-gram language model. Following are some results derived from this algorithm (for the test corpus attatched in the repo.).
+<ul>
+  <li> UNIFORM + UNIGRAM : uniform - 19.38% , unigram - 80.62% , optimised perplexity - 594
+  <li> UNIFORM + BIGRAM : uniform - 14.08% , bigram - 85.92% , optimised perplexity - 304
+  <li> UNIFORM + TRIGRAM : uniform - 17.06% , trigram - 82.94% , optimised perplexity - 366
+</ul>
