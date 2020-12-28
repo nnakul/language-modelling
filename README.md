@@ -32,6 +32,6 @@ In this project as a convention for the interpolated models, an interpolated n-g
 **Open in raw format to know the values of the weights in each case.**
   
   ### OPTIMISED INTERPOLATION OF MODELS
-  #### MIXING N-GRAM MODELS WITH UNIFORM MODEL ONLY
+  ### o MIXING N-GRAM MODELS WITH UNIFORM MODEL ONLY
   
   
