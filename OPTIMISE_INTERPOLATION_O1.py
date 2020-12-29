@@ -176,8 +176,7 @@ for i in range(ITERATIONS):
             elif n == 2:  ngram = getBigramProb(ngram_words[k], ngram_words[k+1])
             elif n == 3:  ngram = getTrigramProb(ngram_words[k], ngram_words[k+1], ngram_words[k+2])
             elif n == 4:  ngram = getQuadgramProb(ngram_words[k], ngram_words[k+1], ngram_words[k+2], ngram_words[k+3])
-            uniform = getUniformProb()
-            grad += (ngram-uniform) / (weights[n]*ngram)
+            grad += ngram / (weights[n]*ngram)
             k += 1
     
     grad /= LEN
