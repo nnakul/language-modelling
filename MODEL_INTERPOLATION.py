@@ -3,7 +3,8 @@ import nltk
 import pickle
 import math
 
-
+# before running the program, set a distribution of weights (in [0,1])
+# among all the models while maintaining there sum total of 1
 weights = [0.2, 0.7, 0.1, 0.0, 0.0]
 for w in weights:
     if not ( 0 <= w <= 1 ):
