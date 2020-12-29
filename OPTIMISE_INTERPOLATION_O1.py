@@ -155,8 +155,16 @@ def evaluateModel ( weights ):
 
 LEARNING_RATE = 0.1
 ITERATIONS = 20
+# before running the program, set the value of n to
+# indicate the n-gram model whose performance has
+# to be optimized by mixing with the uniform model 
 n = 1
+# before running the program, set an initial distribution 
+# of weights between the uniform and the 'n'-gram model, 
+# WHILE KEEPING THEIR SUM TOTAL AS 1. The weights
+# corresponding to all other models MUST BE ZERO.
 weights = np.array([0.1, 0.9, 0.0, 0.0, 0.0])
+
 print( ' INITIAL WEIGHTS :' , weights)
 for i in range(ITERATIONS):
     grad = 0.0
