@@ -302,7 +302,7 @@ n = 3
 # of weights, WHILE KEEPING THEIR SUM TOTAL AS 1. The weights
 # corresponding to the models with gram-length more than n
 # MUST BE ZERO.
-weights = np.array([0.2, 0.2, 0.2, 0.2, 0.0])
+weights = np.array([0.25, 0.25, 0.25, 0.25, 0.00])
 
 if n == 1:    optimiseInterpolatedUniModel(weights)
 elif n == 2:  optimiseInterpolatedBiModel(weights)
